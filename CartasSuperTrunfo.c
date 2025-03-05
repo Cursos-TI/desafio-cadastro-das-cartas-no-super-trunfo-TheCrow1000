@@ -18,10 +18,10 @@ printf ("Insira uma uma letra de 'A' a 'H' (representando um dos oito estados): 
 scanf(" %c", &estado);
 
 printf ("Insira o codigo da carta: \n");
-scanf ("%s", codigo);
+scanf ("%19s", codigo);
 
 printf ("Insira o nome do Estado: \n");
-scanf ("%20s", nome);
+scanf ("%19s", nome);
 
 printf ("Insira a populcao: \n");
 scanf ("%d", &populacao);
