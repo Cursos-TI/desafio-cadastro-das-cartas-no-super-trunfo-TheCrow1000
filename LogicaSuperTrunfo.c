@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main() {
+    //### LOGICA DE PROGRAMACAO - TEMA 2 ###
+    
     // CADASTRO DE CARTAS
 
     char estado1, estado2;
@@ -21,6 +23,7 @@ int main() {
     int resultadoPIBpercapita1;
     int resultadoDensidadePinvertida1;
     int resultadoPontosTuristicos1;
+    int opcao;
 
     // DADOS DA CARTA 1
 
@@ -86,34 +89,54 @@ int main() {
 
 
 
-    // EXIBINDO RESULTADOS
+    // COMPARANDO RESULTADOS - MENU
 
-    printf("\n=== CARTA 1 ===\n");
-    printf("ESTADO: %c \n", estado1);
-    printf("CÓDIGO: %s \n", codigo1);
-    printf("NOME DO ESTADO: %s \n", nome1);
-    printf("POPULAÇÃO: %lu \n", populacao1);
-    printf("ÁREA: %.2f km²\n", area1);
-    printf("PIB: %.2e \n", pib1);
-    printf("NÚMERO DE PONTOS TURÍSTICOS: %d \n", numero_pontos1);
-    printf("DENSIDADE POPUPACIONAL DA CARTA 1: %f \n", densidade_P1);
-    printf("O PIB PER CAPITA DA CARTA 1: %f \n", pib_percapta1);
+    printf("Selecione qual ATRIBUICAO da carta quer compatar:\n");
+    printf("Atribuicao 1 populacoa= \n");
+    printf("Atribuicao 2 Area= \n");
+    printf("Atribuicao 3 Pib= \n");
+    printf("Atribuicao 4 Densidade Populacional= \n");
+    printf("Atribuicao 5 pontos turisticos= \n");
+    scanf("%d", &opcao);
 
-    printf("\n=== CARTA 2 ===\n");
-    printf("ESTADO: %c \n", estado2);
-    printf("CÓDIGO: %s \n", codigo2);
-    printf("NOME DO ESTADO: %s \n", nome2);
-    printf("POPULAÇÃO: %lu \n", populacao2);
-    printf("ÁREA: %.2f km²\n", area2);
-    printf("PIB: %.2e \n", pib2);
-    printf("NÚMERO DE PONTOS TURÍSTICOS: %d \n", numero_pontos2);
-    printf("DENSIDADE POPUPACIONAL DA CARTA 2: %f\n", densidade_P2);
-    printf("O PIB PER CAPITA DA CARTA 2: %f \n", pib_percapta2);
-    printf("==================================\n");
+    //exibido resultado do menu
+switch (opcao)
+{
+case 1:
+    printf ("Comparando POPULACAO de ambas as cartas\n");
+    break;
+    case 2:
+    printf ("Comparando AREA de ambas as cartas\n");
+    break;
+    case 3:
+    printf ("Comparando PIB de ambas as cartas\n");
+    break;
+    case 4:
+    printf ("Comparando DENSIDADE POPULACIONAL de ambas as cartas\n");
+    break;
+    case 5:
+    printf ("Comparando PONTOS TURISTICOS de ambas as cartas\n");
+    break;
+default:
+printf("Opcao invalida!\n");
+    break;
+}
+if ((populacao1 == populacao2) || (area1 == area2) || (pib1 == pib2) || (densidade_P1 == densidade_P2) || (numero_pontos1 == numero_pontos2))
+{
+    printf ("### Empate ### \n");
+}else if ((populacao1 > populacao2) || (area1 > area2) || (pib1 > pib2) || (densidade_P1 > densidade_P2) || (numero_pontos1 > numero_pontos2))
+{
+    printf ("Carta 1 VENCEU!\n");
+}else {
+    printf ("Carta 2 Venceu!\n");
+}
+
+
+    
 
 
         //COMPARACAO COMPOSTA
-    printf ("\n==== DUELO DE CARTAS ====\n");
+    /*printf ("\n==== DUELO DE CARTAS ====\n");
 
     if (populacao1 > populacao2)
     {
@@ -155,7 +178,7 @@ int main() {
         printf ("O PIB PER CAPITA da Carta 1 Venceu!!!\n");
     }
     else printf ("O PIB PER CAPITA da Carta 2 Venceu!\n");
-    
+    */
 
     return 0;
 }
